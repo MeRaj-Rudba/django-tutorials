@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entry List</title>
+</head>
+<body>
+    <h1>Entry List</h1>
+    <ul>
+        {% for entry in entries %}
+            <li><a href="{% url 'entry_detail' entry.pk %}">{{ entry.description|truncatewords:10 }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
